@@ -1,5 +1,5 @@
 return {
-  ["518f"] = true,
+  ["6sd"] = true,
   ["hwid"] = true,
   ["hwid"] = true,
   ["hwid"] = true,
