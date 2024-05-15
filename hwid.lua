@@ -1,4 +1,3 @@
-hwid = {
+return {
   ["hwid"] = true,
 }
-return hwid
