@@ -1,6 +1,6 @@
 return {
 --开发白名单
-["123fa98"] = true,
+["518a71df943f3e8f"] = true,
 ["cmhehebeb"] = true,
 ["YANG_LIN10"]  = true,
 }
