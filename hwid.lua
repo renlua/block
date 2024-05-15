@@ -1,4 +1,4 @@
 hwid = {
-  ["hwid"] = true'
+  ["hwid"] = true,
 }
 return hwid
