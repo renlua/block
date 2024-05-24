@@ -1051,23 +1051,19 @@ end)
                 TextboxBackP.Parent = TextboxBack
                 TextboxBackP.PaddingRight = UDim.new(0, 6)
 
-                TextBox.FocusLost:Connect(
-                    function()
-                        if TextBox.Text == "" then
-                            TextBox.Text = default
-                        end
-                        library.flags[flag] = TextBox.Text
-                        callback(TextBox.Text)
+                TextBox.FocusLost:Connect(function()
+                    if TextBox.Text == "" then
+                      TextBox.Text = default
                     end
-                )
-
-                TextBox:GetPropertyChangedSignal("TextBounds"):Connect(
-                    function()
-                        BoxBG.Size = UDim2.new(0, TextBox.TextBounds.X + 30, 0, 28)
-                    end
-                )
-                BoxBG.Size = UDim2.new(0, TextBox.TextBounds.X + 30, 0, 28)
-            end
+                    library.flags[flag] = TextBox.Text
+                    callback(TextBox.Text)
+                  end)
+          
+                  TextBox:GetPropertyChangedSignal("TextBounds"):Connect(function()
+                    BoxBG.Size = UDim2.new(0, TextBox.TextBounds.X + 30, 0, 28)
+                  end)
+                  BoxBG.Size = UDim2.new(0, TextBox.TextBounds.X + 30, 0, 28)
+                end
 
             function section.Slider(section, text, flag, default, min, max, precise, callback)
                 local callback = callback or function()
