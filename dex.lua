@@ -252,7 +252,7 @@ CreateGui = function()
 	NewGuiPart7.Size = UDim2.new(0, 30, 0, 180)
 	NewGuiPart7.Visible = false
 	NewGuiPart7.ZIndex = 2
-	--[[
+	--
 	NewGuiPart8.Name = "Toggle"
 	NewGuiPart8.Parent = NewGuiPart7
 	NewGuiPart8.Active = false
@@ -266,7 +266,7 @@ CreateGui = function()
 	NewGuiPart8.Text = ">"
 	NewGuiPart8.TextTransparency = 1
 	NewGuiPart8.TextWrapped = true
-	]]
+	
 	NewGuiPart9.Name = "Title"
 	NewGuiPart9.Parent = NewGuiPart7
 	NewGuiPart9.BackgroundColor3 = Color3.new(1, 1, 1)
