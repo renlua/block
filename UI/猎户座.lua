@@ -1,5 +1,3 @@
-
-
 local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
 local RunService = game:GetService("RunService")
@@ -47,7 +45,7 @@ local function GetIcon(IconName)
 end   
 
 local Orion = Instance.new("ScreenGui")
-Orion.Name = "Orion"
+Orion.Name = "DUCKOrion"
 if syn then
 	syn.protect_gui(Orion)
 	Orion.Parent = game.CoreGui
@@ -574,7 +572,7 @@ function OrionLib:MakeWindow(WindowConfig)
 				AddThemeObject(MakeElement("Stroke"), "Stroke"),
 				MakeElement("Corner", 1)
 			}),
-			AddThemeObject(SetProps(MakeElement("Label", LocalPlayer.Character.Name, WindowConfig.HidePremium and 14 or 13), {
+			AddThemeObject(SetProps(MakeElement("Label", LocalPlayer.DisplayName, WindowConfig.HidePremium and 14 or 13), {
 				Size = UDim2.new(1, -60, 0, 13),
 				Position = WindowConfig.HidePremium and UDim2.new(0, 50, 0, 19) or UDim2.new(0, 50, 0, 12),
 				Font = Enum.Font.GothamBold,
@@ -604,7 +602,9 @@ function OrionLib:MakeWindow(WindowConfig)
 		Parent = Orion,
 		Position = UDim2.new(0.5, -307, 0.5, -172),
 		Size = UDim2.new(0, 615, 0, 344),
-		ClipsDescendants = true
+		ClipsDescendants = true,
+        Active = true,
+        Draggable = true
 	}), {
 		--SetProps(MakeElement("Image", "rbxassetid://3523728077"), {
 		--	AnchorPoint = Vector2.new(0.5, 0.5),
