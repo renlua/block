@@ -13,28 +13,40 @@ ui.Parent = game.CoreGui
 ui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 --Toggle
 local VapeToggle = Instance.new("ScreenGui")
-local Button = Instance.new("TextButton")
+local Open = Instance.new("ImageButton")
 local UICorner = Instance.new("UICorner")
 VapeToggle.Name = "VapeToggle"
 VapeToggle.Parent = game.CoreGui
-Button.Name = "Button"
-Button.Parent = VapeToggle
-Button.BackgroundColor3 = Color3.fromRGB(77, 77, 77)
-Button.BorderColor3 = Color3.fromRGB(52, 52, 52)
-Button.BorderSizePixel = 0
-Button.Position = UDim2.new(0.882588627, 0, 0.163685458, 0)
-Button.Size = UDim2.new(0.0358672254, 0, 0.0771396905, 0)
-Button.Font = Enum.Font.FredokaOne
-Button.Text = "T"
-Button.TextColor3 = Color3.fromRGB(255, 255, 255)
-Button.TextScaled = true
-Button.TextSize = 33.000
-Button.TextWrapped = true
-Button.Draggable = true
-UICorner.Parent = Button
-Button.MouseButton1Click:connect(function()
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local UICorner_2 = Instance.new("UICorner")
+
+Frame.Parent = VapeToggle
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.00829315186, 0, 0.31107837, 0)
+Frame.Size = UDim2.new(0, 50, 0, 50)
+Frame.BackgroundTransparency = 1.000
+
+UICorner.CornerRadius = UDim.new(0, 90)
+UICorner.Parent = Frame
+
+Open.Parent = Frame
+Open.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Open.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Open.BorderSizePixel = 0
+Open.Size = UDim2.new(0, 50, 0, 50)
+Open.Active = true
+Open.Draggable = true
+Open.Image = "rbxassetid://17862570082"
+Open.MouseButton1Click:Connect(function()
 ToggleUI()
 end)
+
+UICorner_2.CornerRadius = UDim.new(0, 90)
+UICorner_2.Parent = Open
+
 --
 coroutine.wrap(
     function()
@@ -1556,7 +1568,7 @@ function lib:Window(text, preset, closebind)
             LabelTitle.Font = Enum.Font.Gotham
             LabelTitle.Text = text
             LabelTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
-            LabelTitle.TextSize = 10.000
+            LabelTitle.TextSize = 7.000
             LabelTitle.TextXAlignment = Enum.TextXAlignment.Left
 
             Tab.CanvasSize = UDim2.new(0, 0, 0, TabLayout.AbsoluteContentSize.Y)
