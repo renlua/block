@@ -1528,7 +1528,7 @@ function lib:Window(text, preset, closebind)
 
             Tab.CanvasSize = UDim2.new(0, 0, 0, TabLayout.AbsoluteContentSize.Y)
         end
-        function tabcontent:LabelBin(text)
+        function tabcontent:Bin(text)
             local Label = Instance.new("TextButton")
             local LabelCorner = Instance.new("UICorner")
             local LabelTitle = Instance.new("TextLabel")
