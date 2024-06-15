@@ -111,7 +111,7 @@ end
 
 function lib:Window(text, preset, closebind)
     CloseBind = closebind or Enum.KeyCode.RightControl
-    PresetColor = preset or Color3.fromRGB(44, 120, 224)
+    PresetColor = preset or Color3.fromRGB(85, 255, 0)
     fs = false
     local Main = Instance.new("Frame")
     local TabHold = Instance.new("ScrollingFrame")
@@ -360,8 +360,8 @@ function lib:Window(text, preset, closebind)
         TabTitle.Size = UDim2.new(0, 107, 0, 21)
         TabTitle.Font = Enum.Font.Gotham
         TabTitle.Text = text
-        TabTitle.TextColor3 = Color3.fromRGB(150, 150, 150)
-        TabTitle.TextSize = 14.000
+        TabTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+        TabTitle.TextSize = 10.000
         TabTitle.TextXAlignment = Enum.TextXAlignment.Left
 
         TabBtnIndicator.Name = "TabBtnIndicator"
