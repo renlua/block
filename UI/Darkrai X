@@ -78,7 +78,7 @@ game.CoreGui:FindFirstChild("Darkrai").Enabled = true
 end
 end
 
-function DarkraiX:Window(text,gamenme,logo,keybind)
+function DarkraiX:Window(text)
     local hubname = text
     local gamename = gamenme
 	local uihide = false
